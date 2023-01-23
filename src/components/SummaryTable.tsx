@@ -23,7 +23,7 @@ const SummaryTable: React.FC = () => {
       </div>
       <div className="grid grid-rows-7 grid-flow-col gap-3">
         {summaryDates.map((day) => (
-          <HabitDay key={day.toString()} completed={Math.floor(Math.random() * 6)} />
+          <HabitDay key={day.toString()} amount={6} completed={Math.floor(Math.random() * 6)} />
         ))}
         {amountOfDaysToFill > 0 &&
           Array.from({ length: amountOfDaysToFill }).map((_, i) => (
