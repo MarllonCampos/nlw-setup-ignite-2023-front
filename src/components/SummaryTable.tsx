@@ -10,7 +10,7 @@ const miminumSummaryDatesSize = 18 * 7;
 const amountOfDaysToFill = miminumSummaryDatesSize - summaryDates.length;
 const SummaryTable: React.FC = () => {
   return (
-    <div className="w-full flex">
+    <div className="w-full flex gap-3">
       <div className="grid grid-rows-7 grid-flow-row gap-3">
         {weekDays.map((weekDay, i) => (
           <div
