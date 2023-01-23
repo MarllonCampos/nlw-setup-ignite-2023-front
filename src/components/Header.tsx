@@ -2,6 +2,7 @@ import { Plus, X } from "phosphor-react";
 import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import logoImage from "../assets/logoImage.svg";
+import NewHabitForm from "./NewHabitForm";
 
 export const Header = () => {
   return (
@@ -23,7 +24,10 @@ export const Header = () => {
             <Dialog.Close className="absolute right-6 top-6 text-zinc-400 hover:text-zinc-200">
               <X size={24} aria-label="" />
             </Dialog.Close>
-            Conteúdo do Modal
+
+            <Dialog.Title className="text-3xl leading-tight font-extrabold">Criar hábito</Dialog.Title>
+
+            <NewHabitForm />
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
