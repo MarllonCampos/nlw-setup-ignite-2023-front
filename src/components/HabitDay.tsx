@@ -5,13 +5,12 @@ import { ProgressBar } from "./ProgressBar";
 import { Check } from "phosphor-react";
 
 interface HabitDayProps {
-  amount: number;
-  completed: number;
+  date: Date;
+  amount?: number;
+  completed?: number;
 }
-export const HabitDay = ({ completed, amount }: HabitDayProps) => {
-  const completedPercentage = Math.round((completed / amount) * 100);
-  const color = ["bg-zinc-900", "bg-violet-900", "bg-violet-800", "bg-violet-700", "bg-violet-600", "bg-violet-500"];
-  const habitColor = false && color[completed];
+export const HabitDay = ({ completed = 0, amount = 0 }: HabitDayProps) => {
+  const completedPercentage = amount > 0 ? Math.round((completed / amount) * 100) : 0;
 
   return (
     <Popover.Root>
